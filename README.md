@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="./public/logo.png" alt="泡泡 Logo" width="120" height="120" />
-  
+  <img width="120" height="120" alt="logo" src="https://github.com/user-attachments/assets/f31979aa-48d3-4789-93a0-d45db1f99568" />
+
   <h1 style="font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif; font-size: 2.5rem; font-weight: bold; color: #B22222; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">泡泡</h1>
   <p>人生处处有故事</p>
   <p>
