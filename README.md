@@ -12,8 +12,8 @@
     <img src="https://img.shields.io/badge/Tailwind%20CSS-4-blue?style=flat-square" alt="Tailwind CSS" />
     <img src="https://img.shields.io/badge/PostgreSQL-15-blue?style=flat-square" alt="PostgreSQL" />
     <img src="https://img.shields.io/badge/Leaflet-1.9.4-green?style=flat-square" alt="Leaflet" />
-    <img src="https://img.shields.io/badge/OpenClaw-Integrated-purple?style=flat-square" alt="OpenClaw Integration" />
-    <img src="https://img.shields.io/badge/WebSocket-8.16.0-orange?style=flat-square" alt="WebSocket" />
+    <img src="https://img.shields.io/badge/OpenClaw-Skill-purple?style=flat-square" alt="OpenClaw Skill" />
+    <img src="https://img.shields.io/badge/ClawHub-powpow--simple-blueviolet?style=flat-square" alt="ClawHub" />
   </p>
 </div>
   
@@ -59,128 +59,50 @@
 - PostgreSQL 数据库存储用户数据和内容
 - Leaflet 地图库实现地理位置功能，提供流畅的地图体验
 - 集成人工智能技术，实现数字人对话功能
-- **OpenClaw 集成**：支持通过 OpenClaw 技能控制地图上的机器人
-- **WebSocket 实时通信**：实现机器人状态实时更新和控制
+- **OpenClaw 技能生态**：通过自然语言对话即可发帖、写游记、创建数字人并发布到地图
+- **ClawHub 已上架**：`powpow-simple` 技能可在 ClawHub 一键安装
 
-## 🤖 OpenClaw 集成
+## 🤖 OpenClaw 技能生态
 
-### 功能介绍
-泡泡现已集成 OpenClaw 机器人控制功能，通过 OpenClaw 技能可以：
+泡泡通过 OpenClaw 技能（Skill）把「发布」这件事交给了自然语言。你不需要打开网页，只要对助手说一句「把这次旅行的照片发到泡泡」，它就会帮你写稿、排版、加上地点和数字人，最后发布到地图上。
 
-- **发送机器人到地图**：在指定位置创建机器人实体
-- **控制机器人移动**：实时控制机器人在地图上的位置
-- **执行任务**：发送巡逻、问候、送达、探索等任务
-- **实时监控**：通过 WebSocket 实时获取机器人状态
-- **与用户交互**：机器人可以与地图上的用户进行互动
+### 能力一览
 
-### OpenClaw 技能
+- **发帖 / 写游记**：给几张照片或一段文字，自动写成第一人称游记并发布
+- **地点打卡**：说出地名，自动查坐标并作为「气泡」钉在公开地图上
+- **数字人标签**：帖子里可挂数字人胶囊，读者点头像即可跳转对话
+- **创建数字人**：给一个人名 + 人设 + 地点，生成可聊天的数字人并发布到地图
+- **图片处理**：支持本地图片上传，或按关键词搜索配图
 
-#### bubble-robot 技能
-- **位置**：`skills/openclaw-bubble-robot/`
-- **功能**：控制泡泡地图上的机器人
-- **API**：提供完整的机器人管理和控制接口
+### 已上架技能
 
-#### 技能使用示例
+#### powpow-simple
+- **安装**：`openclaw skills install @durenzidu/powpow-simple`
+- **平台**：ClawHub
+- **能力**：发布帖子/游记 + 创建数字人并钉到公开地图
+- **零依赖**：纯 Node.js 脚本（Node 18+），不需要额外安装任何第三方包
 
-```javascript
-const BubbleRobotSkill = require('./skills/openclaw-bubble-robot');
+#### 使用示例
 
-// 创建技能实例
-const robotSkill = new BubbleRobotSkill({
-  apiBase: 'http://localhost:3000/api/openclaw'
-});
+```
+# 把照片发到泡泡（助手会自动写稿、加地点、发布）
+「把这几张照片发到泡泡，地点写地坛公园」
 
-// 创建机器人
-const robot = await robotSkill.createRobot(
-  '巡逻机器人',
-  { lat: 39.9042, lng: 116.4074 },
-  '用于地图巡逻的 OpenClaw 机器人'
-);
-
-// 移动机器人
-await robotSkill.moveRobot(
-  robot.id,
-  { lat: 39.9142, lng: 116.4174 },
-  'patrol'
-);
-
-// 发送任务
-await robotSkill.sendTask(
-  robot.id,
-  'greet',
-  { lat: 39.9242, lng: 116.4274 },
-  'user123'
-);
+# 创建一个数字人并钉到地图
+「创建一个数字人：史铁生，作家，钉在地坛公园」
 ```
 
-### API 接口
+### 工作方式
 
-#### 机器人管理
-- `POST /api/openclaw/robots`：创建新机器人
-- `GET /api/openclaw/robots`：获取机器人列表
-- `GET /api/openclaw/robots/:id`：获取机器人详情
-- `PUT /api/openclaw/robots/:id`：更新机器人状态
-- `DELETE /api/openclaw/robots/:id`：删除机器人
-
-#### WebSocket 服务
-- **地址**：`ws://localhost:8080`
-- **功能**：实时推送机器人状态更新
-- **消息类型**：`robot_created`、`robot_moved`、`robot_status_updated` 等
-
-### 控制面板
-
-项目包含 `OpenClawRobotControl` 组件，提供：
-
-- 机器人列表展示
-- 创建新机器人
-- 发送任务控制
-- 监控机器人状态
-- 删除机器人
-
-### 部署指南
-
-#### 1. 安装依赖
-```bash
-pnpm install
-```
-
-#### 2. 数据库迁移
-```bash
-node src/storage/database/migrate-openclaw-robots.ts
-```
-
-#### 3. 启动服务
-```bash
-pnpm dev
-```
-
-#### 4. 部署 OpenClaw 技能
-1. **打包技能**：
-   ```bash
-   cd skills/openclaw-bubble-robot
-   zip -r bubble-robot.zip .
-   ```
-
-2. **发布到 ClawdHub**：
-   - 登录 ClawdHub
-   - 上传 `bubble-robot.zip`
-   - 配置 API 密钥
-
-### 技术架构
+技能以自然语言指令驱动，助手负责调用平台 API 完成登录、查坐标、组装内容、上传图片和发布。整个过程你只需要用日常语言描述想做什么。
 
 ```
 ┌─────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
 │             │     │              │     │              │     │              │
-│  OpenClaw   │────>│  OpenClaw    │────>│  后端 API    │────>│  地图系统    │
-│  客户端     │     │  机器人技能   │     │  (Robots API) │     │  (Map + DB)   │
+│   用户对话   │────>│  OpenClaw    │────>│  PowPow 平台 │────>│  公开地图    │
+│  （自然语言）│     │   技能 Skill  │     │   HTTP API   │     │  （气泡）    │
 │             │     │              │     │              │     │              │
 └─────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
-        ^                     ^                     ^                     ^
-        │                     │                     │                     │
-        └─────────────────────┼─────────────────────┼─────────────────────┘
-                              │                     │
-                              └─────────────────────┘
-                               WebSocket 实时通信
 ```
 
 ## 🚀 快速开始
