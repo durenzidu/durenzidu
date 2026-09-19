@@ -21,18 +21,18 @@
 
 <table>
   <tr>
-    <td style="text-align: center;"><img src="screenshots/powpow-01.jpg" width="200" /><br/><sub>界面展示一</sub></td>
+    <td style="text-align: center;"><img src="screenshots/powpow-01.jpg" width="200" /><br/><sub>数字人对话</sub></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="screenshots/powpow-02.jpg" width="200" /><br/><sub>界面展示二</sub></td>
+    <td style="text-align: center;"><img src="screenshots/powpow-02.jpg" width="200" /><br/><sub>放射形菜单</sub></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="screenshots/powpow-03.jpg" width="200" /><br/><sub>界面展示三</sub></td>
+    <td style="text-align: center;"><img src="screenshots/powpow-03.jpg" width="200" /><br/><sub>地图交互界面</sub></td>
   </tr>
   <tr>
-    <td style="text-align: center;"><img src="screenshots/powpow-04.jpg" width="200" /><br/><sub>界面展示四</sub></td>
+    <td style="text-align: center;"><img src="screenshots/powpow-04.jpg" width="200" /><br/><sub>个人页面</sub></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="screenshots/powpow-05.jpg" width="200" /><br/><sub>界面展示五</sub></td>
+    <td style="text-align: center;"><img src="screenshots/powpow-05.jpg" width="200" /><br/><sub>活动页面</sub></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="screenshots/powpow-06.jpg" width="200" /><br/><sub>界面展示六</sub></td>
+    <td style="text-align: center;"><img src="screenshots/powpow-06.jpg" width="200" /><br/><sub>feeds流页面</sub></td>
   </tr>
 </table>
 
@@ -53,7 +53,6 @@
 - **数字人互动**：与特定地点的数字人对话，获得个性化的本地信息
 - **多媒体内容**：支持图片、音频、音乐等多种形式的内容发布
 - **社交分享**：轻松分享你的故事到社交平台，与更多人分享精彩
-- **智能推荐**：根据你的位置和兴趣，推荐相关的内容和数字人
 
 ### 技术特色
 - 使用 Next.js 16.1.1 构建，支持 SSR 和 SSG，提供优秀的性能和 SEO
