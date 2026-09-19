@@ -21,15 +21,18 @@
 
 <table>
   <tr>
-    <td style="text-align: center;"><img src="https://github.com/user-attachments/assets/7042bc62-adb6-41fe-8710-619b53f2b31d" width="200" /><br/><sub>泡泡地图界面</sub></td>
+    <td style="text-align: center;"><img src="screenshots/powpow-01.jpg" width="200" /><br/><sub>界面展示一</sub></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="https://github.com/user-attachments/assets/1eba2c2a-07a5-4416-a4fb-e0608d79dd18" width="200" /><br/><sub>数字人对话界面</sub></td>
+    <td style="text-align: center;"><img src="screenshots/powpow-02.jpg" width="200" /><br/><sub>界面展示二</sub></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="https://github.com/user-attachments/assets/6e85ea85-dc34-4f3d-8737-657aaeee9303" width="200" /><br/><sub>发布泡泡界面</sub></td>
+    <td style="text-align: center;"><img src="screenshots/powpow-03.jpg" width="200" /><br/><sub>界面展示三</sub></td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"><img src="screenshots/powpow-04.jpg" width="200" /><br/><sub>界面展示四</sub></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="https://github.com/user-attachments/assets/f1498bcc-681e-4bcb-bea1-b895311ce645" width="200" /><br/><sub>社交互动界面</sub></td>
+    <td style="text-align: center;"><img src="screenshots/powpow-05.jpg" width="200" /><br/><sub>界面展示五</sub></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="https://github.com/user-attachments/assets/2f3ca982-4c85-4b75-a4a6-cdfe44d17621" width="200" /><br/><sub>个人中心界面</sub></td>
+    <td style="text-align: center;"><img src="screenshots/powpow-06.jpg" width="200" /><br/><sub>界面展示六</sub></td>
   </tr>
 </table>
 
