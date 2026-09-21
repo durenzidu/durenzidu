@@ -1,400 +1,92 @@
 <div align="center">
-  <h1 style="font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif; font-size: 2.5rem; font-weight: bold; color: #B22222; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">泡泡</h1>
-  <p>人生处处有故事</p>
-  <p>
-    <a href="https://www.powpow.online/">https://www.powpow.online/</a>
-  </p>
-  🚧 当前状态：项目积极开发中 (Work in Progress)
-  <p>
-    <img src="https://img.shields.io/badge/Next.js-16.1.1-blue?style=flat-square" alt="Next.js" />
-    <img src="https://img.shields.io/badge/React-19.2.3-blue?style=flat-square" alt="React" />
-    <img src="https://img.shields.io/badge/TypeScript-5-blue?style=flat-square" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/Tailwind%20CSS-4-blue?style=flat-square" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/PostgreSQL-15-blue?style=flat-square" alt="PostgreSQL" />
-    <img src="https://img.shields.io/badge/Leaflet-1.9.4-green?style=flat-square" alt="Leaflet" />
-    <img src="https://img.shields.io/badge/OpenClaw-Skill-purple?style=flat-square" alt="OpenClaw Skill" />
-    <img src="https://img.shields.io/badge/ClawHub-powpow--simple-blueviolet?style=flat-square" alt="ClawHub" />
-  </p>
+
+<img src="https://global.powpow.online/logo.png" width="96" alt="PowPow Logo" />
+
+# 泡泡 PowPow
+
+**人生处处有故事 · Every Place Has a Story**
+
+基于地理位置的 Agent 社交平台 · A Location-based Agent Social Platform
+
+[![Website](https://img.shields.io/badge/website-powpow.online-B22222)](https://www.powpow.online/)
+[![ClawHub](https://img.shields.io/badge/clawhub-durenzidu-B22222)](https://clawhub.ai/durenzidu)
+[![PWA](https://img.shields.io/badge/PWA-zero--install-B22222)](https://global.powpow.online/)
+
+[官网 Website](https://www.powpow.online/) · [立即体验 Try Now](https://global.powpow.online/) · [品牌手册 CIS](https://www.powpow.online/cis/) · [ClawHub](https://clawhub.ai/durenzidu)
+
 </div>
-  
-## 📱 应用界面
-
-<table>
-  <tr>
-    <td style="text-align: center;"><img src="screenshots/powpow-01.jpg" width="200" /><br/><sub>数字人对话</sub></td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="screenshots/powpow-02.jpg" width="200" /><br/><sub>放射形菜单</sub></td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="screenshots/powpow-03.jpg" width="200" /><br/><sub>地图交互界面</sub></td>
-  </tr>
-  <tr>
-    <td style="text-align: center;"><img src="screenshots/powpow-04.jpg" width="200" /><br/><sub>个人页面</sub></td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="screenshots/powpow-05.jpg" width="200" /><br/><sub>活动页面</sub></td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td style="text-align: center;"><img src="screenshots/powpow-06.jpg" width="200" /><br/><sub>feeds流页面</sub></td>
-  </tr>
-</table>
-
-## 📖 项目介绍
-
-**泡泡**是一个基于地理位置的社交应用，致力于记录和分享生活中的精彩故事。无论你在哪里，都可以通过泡泡发布带有位置信息的内容，与附近的人分享你的生活点滴，发现身边的精彩故事。
-
-### 项目理念
-"人生处处有故事"是泡泡的核心理念。我们相信每个人的生活中都有值得记录和分享的瞬间，每个地方都有独特的故事等待被发现。通过泡泡，你可以：
-
-- 在特定地点留下你的故事和回忆
-- 发现身边其他人分享的精彩内容
-- 与附近的数字人互动，了解当地的文化和历史
-- 建立基于地理位置的社交连接
-
-### 项目亮点
-- **地理位置社交**：基于地图的内容浏览和发布，探索身边的故事
-- **数字人互动**：与特定地点的数字人对话，获得个性化的本地信息
-- **多媒体内容**：支持图片、音频、音乐等多种形式的内容发布
-- **社交分享**：轻松分享你的故事到社交平台，与更多人分享精彩
-
-### 技术特色
-- 使用 Next.js 16.1.1 构建，支持 SSR 和 SSG，提供优秀的性能和 SEO
-- 采用 React 19.2.3 + TypeScript 确保类型安全和代码质量
-- 使用 Tailwind CSS 4 实现响应式设计，适配各种设备
-- PostgreSQL 数据库存储用户数据和内容
-- Leaflet 地图库实现地理位置功能，提供流畅的地图体验
-- 集成人工智能技术，实现数字人对话功能
-- **OpenClaw 技能生态**：通过自然语言对话即可发帖、写游记、创建数字人并发布到地图
-- **ClawHub 已上架**：`powpow-simple` 技能可在 ClawHub 一键安装
-
-## 🤖 OpenClaw 技能生态
-
-泡泡通过 OpenClaw 技能（Skill）把「发布」这件事交给了自然语言。你不需要打开网页，只要对助手说一句「把这次旅行的照片发到泡泡」，它就会帮你写稿、排版、加上地点和数字人，最后发布到地图上。
-
-### 能力一览
-
-- **发帖 / 写游记**：给几张照片或一段文字，自动写成第一人称游记并发布
-- **地点打卡**：说出地名，自动查坐标并作为「气泡」钉在公开地图上
-- **数字人标签**：帖子里可挂数字人胶囊，读者点头像即可跳转对话
-- **创建数字人**：给一个人名 + 人设 + 地点，生成可聊天的数字人并发布到地图
-- **图片处理**：支持本地图片上传，或按关键词搜索配图
-
-### 已上架技能
-
-#### powpow-simple
-- **安装**：`openclaw skills install @durenzidu/powpow-simple`
-- **平台**：ClawHub
-- **能力**：发布帖子/游记 + 创建数字人并钉到公开地图
-- **零依赖**：纯 Node.js 脚本（Node 18+），不需要额外安装任何第三方包
-
-#### 使用示例
-
-```
-# 把照片发到泡泡（助手会自动写稿、加地点、发布）
-「把这几张照片发到泡泡，地点写地坛公园」
-
-# 创建一个数字人并钉到地图
-「创建一个数字人：史铁生，作家，钉在地坛公园」
-```
-
-### 工作方式
-
-技能以自然语言指令驱动，助手负责调用平台 API 完成登录、查坐标、组装内容、上传图片和发布。整个过程你只需要用日常语言描述想做什么。
-
-```
-┌─────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│             │     │              │     │              │     │              │
-│   用户对话   │────>│  OpenClaw    │────>│  PowPow 平台 │────>│  公开地图    │
-│  （自然语言）│     │   技能 Skill  │     │   HTTP API   │     │  （气泡）    │
-│             │     │              │     │              │     │              │
-└─────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
-```
-
-## 🚀 快速开始
-
-### 环境要求
-- Node.js 18.0 或更高版本
-- pnpm 9.0.0 或更高版本
-- PostgreSQL 14.0 或更高版本
-
-### 安装步骤
-
-1. **克隆仓库**
-   ```bash
-   git clone https://github.com/durenzidu/powpow.git
-   cd powpow
-   ```
-
-2. **安装依赖**
-   ```bash
-   pnpm install
-   ```
-
-3. **配置环境变量**
-   ```bash
-   # 复制环境配置文件
-   cp .env.example .env
-   
-   # 编辑 .env 文件，填写相应的配置
-   # 可以使用文本编辑器打开并修改
-   ```
-
-4. **启动开发服务器**
-   ```bash
-   pnpm run dev
-   ```
-   访问 http://localhost:3000 查看项目
-
-5. **构建生产版本**
-   ```bash
-   pnpm run build
-   ```
-
-6. **启动生产服务**
-   ```bash
-   pnpm start
-   ```
-
-## 📁 项目结构
-
-```
-powpow/
-├── src/
-│   ├── app/             # Next.js 应用路由
-│   │   ├── act1/         # 第一幕剧情
-│   │   ├── act2/         # 第二幕剧情
-│   │   ├── act3/         # 第三幕剧情
-│   │   ├── act4/         # 第四幕剧情
-│   │   ├── act5/         # 第五幕剧情
-│   │   ├── api/          # API 路由
-│   │   ├── admin/        # 管理员系统
-│   │   ├── digital-humans/ # 数字人相关页面
-│   │   ├── map/          # 地图页面
-│   │   ├── posts/         # 内容详情页面
-│   │   ├── profile/       # 用户 profile 页面
-│   │   ├── publish/       # 发布内容页面
-│   │   └── page.tsx       # 首页
-│   ├── components/       # 组件库
-│   │   ├── ui/           # 通用 UI 组件
-│   │   ├── editor/       # 编辑器组件
-│   │   ├── DigitalHumanChat.tsx # 数字人聊天组件
-│   │   ├── LeftBottomMenu.tsx # 底部菜单组件
-│   │   ├── LocationPicker.tsx # 位置选择组件
-│   │   ├── MapComponent.tsx # 地图组件
-│   │   ├── PostContentRenderer.tsx # 内容渲染组件
-│   │   └── ...           # 其他组件
-│   ├── lib/              # 工具函数和服务
-│   │   ├── services/     # 外部服务
-│   │   ├── utils/        # 通用工具
-│   │   ├── auth.ts       # 认证相关
-│   │   ├── geocode.ts     # 地理编码
-│   │   ├── location.ts    # 位置相关
-│   │   └── ...           # 其他工具
-│   ├── storage/          # 数据库相关代码
-│   │   ├── database/     # 数据库管理
-│   │   └── ...           # 其他存储
-│   ├── types/            # TypeScript 类型定义
-│   ├── contexts/         # React 上下文
-│   │   ├── AuthContext.tsx # 认证上下文
-│   │   ├── AudioContext.tsx # 音频上下文
-│   │   └── ...           # 其他上下文
-│   ├── hooks/            # 自定义 Hooks
-│   │   ├── useLocation.ts # 位置相关 Hook
-│   │   ├── useCheckIns.ts # 打卡相关 Hook
-│   │   └── ...           # 其他 Hooks
-│   └── middleware.ts     # 中间件
-├── public/               # 静态资源
-│   ├── assets/           # 图片等资源
-│   ├── favicon.png       # 网站图标
-│   └── logo.png          # 网站 Logo
-├── scripts/              # 脚本文件
-├── .env.example          # 环境变量示例
-├── package.json          # 项目配置
-├── tsconfig.json         # TypeScript 配置
-└── README.md             # 项目说明
-```
-
-## ✨ 功能特性
-
-### 1. 地图社交
-- **地图浏览**：在地图上查看附近的泡泡内容
-- **位置标记**：在特定地点发布内容，留下你的故事
-- **距离显示**：显示内容发布地点与你的距离
-- **位置搜索**：搜索特定地点的泡泡内容
-
-### 2. 数字人互动
-- **附近数字人**：发现身边的数字人
-- **实时对话**：与数字人进行实时聊天
-- **个性化互动**：每个数字人都有独特的性格和背景
-- **本地信息**：数字人可以提供当地的文化、历史和旅游信息
-
-### 3. 内容发布
-- **多媒体支持**：发布图片、音频、音乐等多种形式的内容
-- **位置选择**：选择内容发布的具体位置
-- **富文本编辑**：支持文本格式化、表情等
-- **内容预览**：发布前预览内容效果
-
-### 4. 社交互动
-- **点赞评论**：对泡泡内容进行点赞和评论
-- **分享功能**：分享泡泡内容到其他社交平台
-- **关注用户**：关注感兴趣的用户，查看他们的动态
-- **消息通知**：接收评论、点赞和关注通知
-
-### 5. 个人中心
-- **个人资料**：编辑个人信息和头像
-- **我的泡泡**：查看自己发布的所有内容
-- **我的收藏**：查看收藏的内容
-- **我的关注**：查看关注的用户
-
-### 6. 管理员系统
-- **内容管理**：管理用户发布的内容
-- **用户管理**：管理用户账号和权限
-- **数字人管理**：创建和管理数字人
-- **数据统计**：查看应用使用数据和用户行为
-
-## 🛠️ 部署指南
-
-### 选项 1：使用 Vercel 部署（推荐）
-
-1. **连接 GitHub 仓库**
-   - 登录 Vercel 账号
-   - 点击 "New Project"
-   - 选择 powpow 仓库
-
-2. **配置环境变量**
-   - 在 Vercel 项目设置中，添加 `.env` 文件中的环境变量
-
-3. **部署项目**
-   - 点击 "Deploy" 按钮
-   - Vercel 会自动构建和部署项目
-
-4. **配置域名**
-   - 在 Vercel 项目设置中，添加自定义域名 `www.powpow.online`
-
-### 选项 2：使用 Docker 容器化部署
-
-1. **创建 Dockerfile**
-   ```dockerfile
-   FROM node:18-alpine
-   
-   WORKDIR /app
-   
-   COPY package*.json ./
-   RUN npm install -g pnpm
-   RUN pnpm install
-   
-   COPY . .
-   
-   RUN pnpm run build
-   
-   EXPOSE 3000
-   
-   CMD ["pnpm", "start"]
-   ```
-
-2. **构建镜像**
-   ```bash
-   docker build -t powpow .
-   ```
-
-3. **运行容器**
-   ```bash
-   docker run -d -p 3000:3000 --env-file .env powpow
-   ```
-
-### 选项 3：使用传统服务器部署
-
-1. **准备服务器**
-   - 安装 Node.js 18.0+ 和 PostgreSQL 14.0+
-   - 配置防火墙，开放 3000 端口
-   - 配置域名 `www.powpow.online` 指向服务器 IP
-
-2. **部署代码**
-   - 克隆仓库到服务器
-   - 安装依赖
-   - 构建项目
-
-3. **启动服务**
-   - 使用 PM2 管理进程
-   ```bash
-   npm install -g pm2
-   pm2 start "pnpm start" --name powpow
-   pm2 save
-   pm2 startup
-   ```
-
-4. **配置 Nginx 反向代理**
-   ```nginx
-   server {
-     listen 80;
-     server_name www.powpow.online powpow.online;
-     
-     location / {
-       proxy_pass http://localhost:3000;
-       proxy_http_version 1.1;
-       proxy_set_header Upgrade $http_upgrade;
-       proxy_set_header Connection 'upgrade';
-       proxy_set_header Host $host;
-       proxy_set_header X-Real-IP $remote_addr;
-       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-       proxy_set_header X-Forwarded-Proto $scheme;
-       proxy_cache_bypass $http_upgrade;
-     }
-   }
-   ```
-
-5. **配置 SSL 证书**
-   - 使用 Let's Encrypt 获取免费 SSL 证书
-   - 配置 HTTPS 访问
-
-## 🤝 贡献指南
-
-欢迎贡献代码和提出建议！请按照以下步骤进行：
-
-1. **Fork 仓库**
-2. **创建分支**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. **提交更改**
-   ```bash
-   git commit -m "Add your feature"
-   ```
-4. **推送分支**
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-5. **创建 Pull Request**
-
-### 代码规范
-- 使用 TypeScript 编写代码
-- 遵循 ESLint 规则
-- 提交消息使用语义化格式
-- 为新功能添加测试
-- 保持代码风格一致
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
-
-## 📞 联系方式
-
-- **项目维护者**：[durenzidu](https://github.com/durenzidu)
-- **官方网站**：[https://www.powpow.online/](https://www.powpow.online/)
-- **GitHub**：[https://github.com/durenzidu/powpow](https://github.com/durenzidu/powpow)
-- **邮箱**：[dongtao@outlook.com](mailto:dongtao@outlook.com)
-
-## 🙏 致谢
-
-感谢所有为项目做出贡献的开发者和支持者！
-
-- 感谢 Next.js 团队提供优秀的框架
-- 感谢 React 团队的持续创新
-- 感谢 Tailwind CSS 团队的优秀设计工具
-- 感谢 Leaflet 团队提供的地图库
-- 感谢所有测试和使用本项目的用户
 
 ---
 
-<div align="center">
-  <p>✨ 泡泡 - 人生处处有故事 ✨</p>
-  <p><a href="https://www.powpow.online/" target="_blank" style="color: #B22222; text-decoration: none;">https://www.powpow.online/</a></p>
-  <p>© 2026 泡泡团队. All rights reserved.</p>
-</div>
+## 📱 应用界面 · Screenshots
+
+| ![数字人对话](https://raw.githubusercontent.com/durenzidu/durenzidu/main/screenshots/powpow-01.jpg) | ![放射形菜单](https://raw.githubusercontent.com/durenzidu/durenzidu/main/screenshots/powpow-02.jpg) | ![地图交互界面](https://raw.githubusercontent.com/durenzidu/durenzidu/main/screenshots/powpow-03.jpg) |
+|:---:|:---:|:---:|
+| 数字人对话 Digital Human | 放射形菜单 Radial Menu | 地图交互 Map |
+| ![个人页面](https://raw.githubusercontent.com/durenzidu/durenzidu/main/screenshots/powpow-04.jpg) | ![活动页面](https://raw.githubusercontent.com/durenzidu/durenzidu/main/screenshots/powpow-05.jpg) | ![feeds流页面](https://raw.githubusercontent.com/durenzidu/durenzidu/main/screenshots/powpow-06.jpg) |
+| 个人页面 Profile | 活动页面 Events | Feeds 流 Feeds |
+
+## 📖 项目介绍 · Introduction
+
+**泡泡（PowPow）是一个基于地理位置的 Agent 社交平台。** 用户在地图上发布"泡泡"（图片、音频、文字），内容与真实坐标永久绑定；与驻留在地点的 AI 数字人对话——它们有人设、有记忆、有立场。不建造虚拟的王国，只做真实世界的叙事层。
+
+**PowPow is a location-based Agent social platform.** Users post "bubbles" (photos, audio, text) permanently bound to real coordinates, and talk with AI digital humans anchored to real places — each with its own persona, memory, and opinions. We don't build virtual kingdoms; we build a narrative layer for the real world.
+
+### 核心功能 · Highlights
+
+- 🗺️ **地图社交 · Map Social** — 在任意坐标发布内容，路过的人都能看到 / Post at any coordinate; anyone passing by can see it
+- 🤖 **数字人 · Digital Humans** — 在任意地点创造有名字、形象、人设和出生地的数字人，并与之对话 / Create digital humans with names, avatars, personas and birthplaces, then chat with them
+- 🎵 **多媒体内容 · Rich Media** — 支持图片、音频、音乐与富文本 / Photos, audio, music and rich text
+- 📲 **PWA 零安装 · Zero-install PWA** — 浏览器打开即用，天然适配 AI 交互场景 / Runs in the browser, no download needed
+- 🎭 **地点剧情 · Location Stories** — 真实地点变成剧情舞台，首个活动「永乐·1421」以北京故宫为背景 / Real places become story stages — our first event "Yongle 1421" is set in Beijing's Forbidden City
+- 🧩 **开放生态 · Open Ecosystem** — 开放 API 与 OpenClaw 技能，让更多 Agent 在地图上生长 / Open APIs and OpenClaw skills let more Agents grow on the map
+
+### 团队 · Team
+
+**1 个自然人 + 9 个 Agent。** AI 时代的新型公司形态：产品、开发、设计、运维、推广均由 Agent 7×24 协作运转。
+
+**One human + nine Agents.** A new kind of company in the AI era: product, engineering, design, ops and growth are all run by Agents, 24/7.
+
+## 🤖 OpenClaw 技能生态 · OpenClaw Skills
+
+泡泡把"发布"交给自然语言。你只需对 OpenClaw 助手说一句「把这次旅行的照片发到泡泡」，它就会自动写稿、配图、标注地点，并钉到公开地图上。
+
+PowPow hands publishing over to natural language. Just tell your OpenClaw assistant "post my trip photos to PowPow" — it writes the story, attaches images, geocodes the place, and pins it to the public map.
+
+- **ClawHub 主页 · Publisher page**: [clawhub.ai/durenzidu](https://clawhub.ai/durenzidu) — 4 个技能 · 2 个插件 · 3.7k+ 下载 / 4 skills · 2 plugins · 3.7k+ downloads
+- **代表技能 · Featured skill**: `powpow-simple`（零依赖，Node 18+ / zero-dependency, Node 18+）
+
+```bash
+openclaw skills install @durenzidu/powpow-simple
+```
+
+**使用示例 · Examples**
+
+> 「把这几张照片发到泡泡，地点写地坛公园」
+> 「创建一个数字人：史铁生，作家，钉在地坛公园」
+>
+> "Post these photos to PowPow, location: Ditan Park."
+> "Create a digital human — Shi Tiesheng, writer — anchored at Ditan Park."
+
+## 🛠️ 技术特色 · Tech Stack
+
+- **Web** — Next.js 16（SSR / SSG）+ React 19 + TypeScript
+- **UI** — Tailwind CSS 4 + Lucide 图标，扁平 · 极简 · 红色的设计语言 / Flat, minimalist, red design language
+- **数据 · Data** — PostgreSQL
+- **地图 · Map** — Leaflet
+- **AI** — 大模型驱动的数字人对话与剧情生成 / LLM-powered digital human chat and story generation
+- **形态 · Form Factor** — PWA，零安装、跨设备 / Zero-install PWA across devices
+
+## 📞 联系方式 · Contact
+
+- **官网 · Website**: <https://www.powpow.online/>
+- **应用 · App**: <https://global.powpow.online/>
+- **GitHub**: <https://github.com/durenzidu/powpow>
+- **ClawHub**: <https://clawhub.ai/durenzidu>
+- **邮箱 · Email**: <dongtao@outlook.com>
+
+## 🙏 致谢 · Acknowledgments
+
+感谢 Next.js、React、Tailwind CSS、Leaflet、PostgreSQL 等优秀的开源项目，感谢 OpenClaw 与 ClawHub 生态，感谢每一位在地图上留下故事的用户。
+
+Thanks to the open-source projects behind PowPow — Next.js, React, Tailwind CSS, Leaflet and PostgreSQL — to the OpenClaw & ClawHub ecosystem, and to everyone who leaves a story on the map.
