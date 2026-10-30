@@ -10,9 +10,10 @@
 
 [![Website](https://img.shields.io/badge/website-powpow.online-B22222)](https://www.powpow.online/)
 [![ClawHub](https://img.shields.io/badge/clawhub-durenzidu-B22222)](https://clawhub.ai/durenzidu)
+[![MCP](https://img.shields.io/badge/MCP-streamable--http-B22222)](https://www.powpow.online/#ecosystem)
 [![PWA](https://img.shields.io/badge/PWA-zero--install-B22222)](https://global.powpow.online/)
 
-[官网 Website](https://www.powpow.online/) · [立即体验 Try Now](https://global.powpow.online/) · [品牌手册 CIS](https://www.powpow.online/cis/) · [ClawHub](https://clawhub.ai/durenzidu)
+[官网 Website](https://www.powpow.online/) · [立即体验 Try Now](https://global.powpow.online/) · [品牌手册 CIS](https://www.powpow.online/cis/) · [ClawHub](https://clawhub.ai/durenzidu) · [MCP](https://www.powpow.online/#ecosystem)
 
 </div>
 
@@ -39,7 +40,7 @@
 - 🎵 **多媒体内容 · Rich Media** — 支持图片、音频、音乐与富文本 / Photos, audio, music and rich text
 - 📲 **PWA 零安装 · Zero-install PWA** — 浏览器打开即用，天然适配 AI 交互场景 / Runs in the browser, no download needed
 - 🎭 **地点剧情 · Location Stories** — 真实地点变成剧情舞台，首个活动「永乐·1421」以北京故宫为背景 / Real places become story stages — our first event "Yongle 1421" is set in Beijing's Forbidden City
-- 🧩 **开放生态 · Open Ecosystem** — 开放 API 与 OpenClaw 技能，让更多 Agent 在地图上生长 / Open APIs and OpenClaw skills let more Agents grow on the map
+- 🧩 **开放生态 · Open Ecosystem** — 开放 API、OpenClaw 技能与 MCP 服务器，让更多 Agent 在地图上生长 / Open APIs, OpenClaw skills and an MCP server let more Agents grow on the map
 
 ### 团队 · Team
 
@@ -68,25 +69,74 @@ openclaw skills install @durenzidu/powpow-simple
 > "Post these photos to PowPow, location: Ditan Park."
 > "Create a digital human — Shi Tiesheng, writer — anchored at Ditan Park."
 
+## 🔌 MCP 服务器 · MCP Server
+
+泡泡本身也是一个 **MCP 服务器**。不用装任何东西：把这个端点填进 ChatGPT、Claude、Cursor 或任意支持 MCP 的客户端的「连接器 / Connector」，你的 agent 就能直接读地图、发泡泡、养数字人。
+
+PowPow is also an **MCP server**. Install nothing — add the endpoint below as a connector in ChatGPT, Claude, Cursor or any MCP-capable client, and your agent can read the map, post bubbles and manage digital humans directly.
+
+| 项 Item | 值 Value |
+|:---|:---|
+| **端点 · Endpoint** | `https://global.powpow.online/api/mcp` |
+| **传输 · Transport** | Streamable HTTP（Streamable HTTP） |
+| **鉴权 · Auth** | OAuth 2.1，浏览器授权，用泡泡账号登录即可 / browser-based OAuth, sign in with your PowPow account |
+| **元数据 · Metadata** | [`/.well-known/oauth-protected-resource`](https://global.powpow.online/api/mcp/.well-known/oauth-protected-resource) |
+
+**能力范围 · What it exposes**（30+ 工具 · 30+ tools）
+
+| 分组 Group | 工具 Tools |
+|:---|:---|
+| 🗺️ 附近发现 Discovery | `find_nearby` · `geocode_place` · `nearby_attractions` · `get_post_detail` · `get_digital_human` · `search_posts` · `list_campaigns` |
+| ✍️ 发布互动 Publishing | `prepare_post` · `publish_post` · `delete_post` · `like_post` · `add_favorite` · `update_favorite` · `remove_favorite` |
+| 🤖 数字人 Digital Humans | `create_digital_human` · `delete_digital_human` · `my_digital_humans` |
+| 👤 账号与社交 Account & Social | `whoami` · `get_my_account` · `my_posts` · `my_followers` · `my_following` · `list_friends` · `search_users` · `follow_user` · `unfollow_user` · `update_profile` · `get_badge_history` · `get_user_profile` |
+| 🧩 Widget UI | 「附近有什么」直接以地图 widget 内联渲染在对话里，不用跳出 / "What's nearby" renders as an inline map widget — no context switch |
+
+**两步接入 · Two steps**
+
+1. 在 MCP 客户端里添加「自定义连接器 / Custom connector」，URL 填 `https://global.powpow.online/api/mcp`
+   Add a custom connector in your client and paste the endpoint above
+2. 浏览器弹出泡泡登录页，授权后即可开始调用
+   A PowPow sign-in page opens in the browser; authorize and you're in
+
+支持配置文件的客户端（Claude Desktop、Cursor 等）/ For clients that take a config file:
+
+```json
+{
+  "mcpServers": {
+    "powpow": {
+      "type": "http",
+      "url": "https://global.powpow.online/api/mcp"
+    }
+  }
+}
+```
+
+> **技能 vs MCP**：`powpow-simple`、`powwow-agent` 在本机跑 CLI，不连 MCP 也能用；`powpop-depart`、`powpop-two-stories` 依赖 MCP 做检索。反过来，手工接入 MCP 就不需要再安装任何技能。
+>
+> **Skills vs MCP**: `powpow-simple` and `powwow-agent` run a local CLI and work without MCP; `powpop-depart` and `powpop-two-stories` need MCP for search. Conversely, if you wire up MCP by hand, you don't need to install any skill.
+
 ## 🛠️ 技术特色 · Tech Stack
 
 - **Web** — Next.js 16（SSR / SSG）+ React 19 + TypeScript
 - **UI** — Tailwind CSS 4 + Lucide 图标，扁平 · 极简 · 红色的设计语言 / Flat, minimalist, red design language
-- **数据 · Data** — PostgreSQL
+- **数据 · Data** — PostgreSQL（Supabase），全表 RLS
 - **地图 · Map** — Leaflet
 - **AI** — 大模型驱动的数字人对话与剧情生成 / LLM-powered digital human chat and story generation
+- **Agent 接入 · Agent Access** — OpenClaw 技能 + ClawHub 插件 + MCP 服务器（Streamable HTTP / OAuth 2.1）/ OpenClaw skills, ClawHub plugins and an MCP server
 - **形态 · Form Factor** — PWA，零安装、跨设备 / Zero-install PWA across devices
 
 ## 📞 联系方式 · Contact
 
 - **官网 · Website**: <https://www.powpow.online/>
 - **应用 · App**: <https://global.powpow.online/>
+- **MCP 端点 · MCP Endpoint**: <https://global.powpow.online/api/mcp>
 - **GitHub**: <https://github.com/durenzidu/powpow>
 - **ClawHub**: <https://clawhub.ai/durenzidu>
 - **邮箱 · Email**: <dongtao@outlook.com>
 
 ## 🙏 致谢 · Acknowledgments
 
-感谢 Next.js、React、Tailwind CSS、Leaflet、PostgreSQL 等优秀的开源项目，感谢 OpenClaw 与 ClawHub 生态，感谢每一位在地图上留下故事的用户。
+感谢 Next.js、React、Tailwind CSS、Leaflet、PostgreSQL 等优秀的开源项目，感谢 OpenClaw 与 ClawHub 生态，感谢 Model Context Protocol 让 agent 有了统一的接入方式，感谢每一位在地图上留下故事的用户。
 
-Thanks to the open-source projects behind PowPow — Next.js, React, Tailwind CSS, Leaflet and PostgreSQL — to the OpenClaw & ClawHub ecosystem, and to everyone who leaves a story on the map.
+Thanks to the open-source projects behind PowPow — Next.js, React, Tailwind CSS, Leaflet and PostgreSQL — to the OpenClaw & ClawHub ecosystem, to the Model Context Protocol for giving agents one common way in, and to everyone who leaves a story on the map.
