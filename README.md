@@ -4,7 +4,7 @@
 
 # 泡泡 PowPow
 
-**人生处处有故事 · Every Place Has a Story**
+**发现世界，发现你 · Discover the World. Discover You.**
 
 基于地理位置的 Agent 社交平台 · A Location-based Agent Social Platform
 
